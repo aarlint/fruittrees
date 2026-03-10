@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Western Fruit Trees — Growing Guide for Montana &amp; Utah</title>
+  <meta name="description" content="Complete guide to growing fruit trees in the Western US. Pollination partners, spacing, cold hardiness, and planting tips for Montana, Utah, and the Mountain West.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #0f1419;
+  --bg-card: #1a1f26;
+  --bg-hover: #232a33;
+  --border: #2a3441;
+  --border-mid: #3a4654;
+  --text: #e6edf3;
+  --text-mid: #a0afc0;
+  --text-muted: #6e7f8d;
+  --accent: #4ade80;
+  --accent-dim: #22c55e;
+  --yellow: #facc15;
+  --orange: #fb923c;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --purple: #c084fc;
+  --pink: #f472b6;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --radius: 12px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: calc(70px + var(--safe-bottom));
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Layout */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* Bottom Navigation - Mobile First */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  padding-bottom: calc(8px + var(--safe-bottom));
+  z-index: 100;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: color 0.15s;
+  border-radius: 8px;
+}
+.nav-item:hover, .nav-item.active { color: var(--accent); text-decoration: none; background: var(--bg-hover); }
+.nav-icon { font-size: 1.3rem; }
+
+/* Hero - Compact on mobile */
+.hero {
+  padding: 24px 0;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.hero h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+.hero p { font-size: 0.9rem; color: var(--text-mid); max-width: 600px; margin: 0 auto 16px; padding: 0 16px; }
+.zone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-mid);
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  color: var(--text-mid);
+}
+.zone-badge strong { color: var(--accent); }
+
+/* Info button for tooltips */
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: var(--border-mid);
+  border: none;
+  border-radius: 50%;
+  color: var(--text);
+  font-size: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 4px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.info-btn:hover { background: var(--accent); color: #000; }
+
+/* Info modal/tooltip */
+.info-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+}
+.info-modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 500px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+  animation: slideUp 0.2s ease-out;
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.info-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.info-modal-title { font-size: 1.1rem; font-weight: 600; }
+.info-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px;
+}
+.info-modal-body { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+.info-modal-body p { margin-bottom: 12px; }
+.info-modal-body strong { color: var(--text); }
+
+/* Search */
+.search-section { padding: 16px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 50; }
+.search-bar {
+  display: flex;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.search-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-muted); }
+
+/* Filter chips - horizontal scroll on mobile */
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px 16px 4px;
+  margin: 0 -16px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.chip:hover { border-color: var(--border-mid); color: var(--text); }
+.chip.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 600; }
+
+/* Tree grid - Single column on mobile */
+.trees-section { padding: 20px 0; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 4px; }
+.section-title { font-size: 1.1rem; font-weight: 600; }
+.tree-count { font-size: 0.8rem; color: var(--text-muted); }
+
+.tree-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tree-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tree-card:hover { border-color: var(--border-mid); }
+.tree-card:active { transform: scale(0.98); }
+
+.tree-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.tree-icon { font-size: 2rem; }
+.tree-info { flex: 1; min-width: 0; }
+.tree-name { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
+.tree-variety { font-size: 0.75rem; color: var(--text-muted); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tree-type-badge {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--bg-hover);
+  color: var(--text-mid);
+  flex-shrink: 0;
+}
+.tree-type-badge.apple { background: #fee2e2; color: #dc2626; }
+.tree-type-badge.pear { background: #fef9c3; color: #a16207; }
+.tree-type-badge.cherry { background: #fce7f3; color: #be185d; }
+.tree-type-badge.plum { background: #f3e8ff; color: #7c3aed; }
+.tree-type-badge.peach { background: #ffedd5; color: #c2410c; }
+.tree-type-badge.apricot { background: #fed7aa; color: #c2410c; }
+
+.tree-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+}
+.meta-item { display: flex; align-items: center; gap: 4px; color: var(--text-mid); }
+.meta-icon { font-size: 0.85rem; }
+.meta-label { color: var(--text-muted); }
+.meta-value { color: var(--text); font-weight: 500; }
+
+.pollination-info {
+  background: var(--bg-hover);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.75rem;
+}
+.pollination-label { color: var(--text-muted); margin-bottom: 4px; display: flex; align-items: center; }
+.pollination-partners { display: flex; flex-wrap: wrap; gap: 6px; }
+.partner-tag {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  color: var(--text-mid);
+}
+.self-fertile { color: var(--accent); font-weight: 500; }
+
+/* Tree detail modal - Full screen on mobile */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 200;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.modal-card {
+  min-height: 100%;
+  padding-bottom: calc(20px + var(--safe-bottom));
+}
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+.modal-icon { font-size: 2.5rem; }
+.modal-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 2px; }
+.modal-variety { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+.modal-close {
+  margin-left: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+.modal-close:hover { color: var(--text); border-color: var(--border-mid); }
+
+.modal-body { padding: 16px; }
+.detail-section { margin-bottom: 20px; }
+.detail-section:last-child { margin-bottom: 0; }
+.detail-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.detail-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.detail-value { font-size: 0.95rem; font-weight: 600; margin-bottom: 2px; }
+.detail-key { font-size: 0.65rem; color: var(--text-muted); }
+
+.detail-text { font-size: 0.85rem; color: var(--text-mid); line-height: 1.7; }
+
+.partner-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.partner-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+.partner-item.recommended { border-color: var(--accent); }
+.partner-item.recommended::before { content: '★ '; color: var(--accent); }
+
+/* Guides section */
+.guides-section {
+  padding: 24px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+.guides-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+.guide-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: all 0.15s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.guide-card:hover { border-color: var(--border-mid); }
+.guide-icon { font-size: 1.5rem; flex-shrink: 0; }
+.guide-content { flex: 1; }
+.guide-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+.guide-desc { font-size: 0.8rem; color: var(--text-mid); }
+
+/* Learn section */
+.learn-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+.term-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.term-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.15s;
+}
+.term-item:hover { border-color: var(--border-mid); }
+.term-name { font-weight: 600; font-size: 0.9rem; flex: 1; }
+.term-arrow { color: var(--text-muted); font-size: 1.2rem; }
+
+/* Footer */
+footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Page sections - hidden by default */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  
+  .bottom-nav {
+    position: static;
+    justify-content: center;
+    gap: 32px;
+    padding: 12px 0;
+    border-top: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-item {
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px 20px;
+  }
+  .nav-icon { font-size: 1.1rem; }
+  
+  .hero { padding: 48px 0; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  
+  .tree-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+  
+  .modal-overlay {
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    min-height: auto;
+  }
+  .modal-header { position: static; background: transparent; }
+  
+  .info-modal { align-items: center; }
+  .info-modal-content { border-radius: 16px; max-width: 450px; }
+  
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .guide-card { flex-direction: column; padding: 20px; }
+  .guide-icon { font-size: 2rem; }
+  
+  .detail-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+}
+  </style>
+</head>
+<body>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active" data-page="trees">
+      <span class="nav-icon">🌳</span>
+      <span>Trees</span>
+    </a>
+    <a href="#" class="nav-item" data-page="guides">
+      <span class="nav-icon">📖</span>
+      <span>Guides</span>
+    </a>
+    <a href="#" class="nav-item" data-page="learn">
+      <span class="nav-icon">💡</span>
+      <span>Learn</span>
+    </a>
+  </nav>
+
+  <!-- Trees Page -->
+  <div class="page active" id="page-trees">
+    <section class="hero">
+      <div class="container">
+        <h1>🌳 Western Fruit Trees</h1>
+        <p>Find the right varieties for Montana, Utah &amp; the Mountain West</p>
+        <div class="zone-badge">
+          🗺️ USDA Zones <strong>3–6</strong>
+          <button class="info-btn" onclick="showInfo('zones')">?</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-bar">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search trees...">
+        </div>
+        <div class="filter-chips" id="filterChips">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="apple">🍎 Apples</button>
+          <button class="chip" data-filter="pear">🍐 Pears</button>
+          <button class="chip" data-filter="cherry">🍒 Cherries</button>
+          <button class="chip" data-filter="plum">🟣 Plums</button>
+          <button class="chip" data-filter="peach">🍑 Peaches</button>
+          <button class="chip" data-filter="apricot">🟠 Apricots</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trees-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Varieties</h2>
+          <span class="tree-count" id="treeCount">Loading...</span>
+        </div>
+        <div class="tree-grid" id="treeGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Guides Page -->
+  <div class="page" id="page-guides">
+    <section class="hero">
+      <div class="container">
+        <h1>📖 Growing Guides</h1>
+        <p>Everything you need to know about planting and caring for fruit trees</p>
+      </div>
+    </section>
+    
+    <section class="guides-section" style="background: var(--bg);">
+      <div class="container">
+        <div class="guides-grid">
+          <div class="guide-card" onclick="showInfo('pollination')">
+            <div class="guide-icon">🐝</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Pollination Basics</h3>
+              <p class="guide-desc">Understanding cross-pollination, self-fertile varieties, and ensuring good fruit set.</p>
+            </div>
+          </div>
+          <div class="guide-card" onclick="showInfo('spacing')">
+            <div class="guide-icon">📏</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Spacing &amp; Layout</h3>
+              <p class="guide-desc">Proper spacing for dwarf, semi-dwarf, and standard rootstocks.</p>
+            </div>
+          </div>
+          <div class="guide-card" onclick="showInfo('winter')">
+            <div class="guide-icon">❄️</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Winter Protection</h3>
+              <p class="guide-desc">Protecting trees from harsh Montana and Utah winters.</p>
+            </div>
+          </div>
+          <div class="guide-card" onclick="showInfo('planting')">
+            <div class="guide-icon">🌱</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Planting Guide</h3>
+              <p class="guide-desc">When to plant, soil prep, watering, and first-year care.</p>
+            </div>
+          </div>
+          <div class="guide-card" onclick="showInfo('pruning')">
+            <div class="guide-icon">✂️</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Pruning</h3>
+              <p class="guide-desc">Annual pruning techniques for healthy, productive trees.</p>
+            </div>
+          </div>
+          <div class="guide-card" onclick="showInfo('pests')">
+            <div class="guide-icon">🦌</div>
+            <div class="guide-content">
+              <h3 class="guide-title">Pest &amp; Wildlife</h3>
+              <p class="guide-desc">Protecting from deer, rabbits, and common orchard pests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Learn Page -->
+  <div class="page" id="page-learn">
+    <section class="hero">
+      <div class="container">
+        <h1>💡 Learn</h1>
+        <p>Understand key terms and concepts for successful fruit tree growing</p>
+      </div>
+    </section>
+    
+    <section class="learn-section">
+      <div class="container">
+        <div class="term-list">
+          <div class="term-item" onclick="showInfo('chill-hours')">
+            <span class="term-name">❄️ Chill Hours</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('zones')">
+            <span class="term-name">🗺️ USDA Hardiness Zones</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('pollination')">
+            <span class="term-name">🐝 Pollination</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('rootstock')">
+            <span class="term-name">🌿 Rootstock Types</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('self-fertile')">
+            <span class="term-name">✓ Self-Fertile vs Cross-Pollination</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('spacing')">
+            <span class="term-name">📏 Tree Spacing</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('harvest')">
+            <span class="term-name">📅 Harvest Timing</span>
+            <span class="term-arrow">›</span>
+          </div>
+          <div class="term-item" onclick="showInfo('freestone')">
+            <span class="term-name">🍑 Freestone vs Clingstone</span>
+            <span class="term-arrow">›</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <p>🌳 Western Fruit Trees</p>
+        <p style="margin-top: 4px; font-size: 0.75rem;">Data from university extension services</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tree Detail Modal -->
+  <div class="modal-overlay" id="modal" style="display:none" onclick="if(event.target===this)closeModal()">
+    <div class="modal-card" id="modalContent"></div>
+  </div>
+
+  <!-- Info Modal -->
+  <div class="info-modal" id="infoModal" style="display:none" onclick="if(event.target===this)closeInfo()">
+    <div class="info-modal-content" id="infoContent"></div>
+  </div>
+
+  <script>
+// Info content database
+const infoContent = {
+  'chill-hours': {
+    title: '❄️ Chill Hours',
+    content: `
+      <p><strong>Chill hours</strong> are the number of hours a fruit tree needs at temperatures between 32°F and 45°F (0°C to 7°C) during winter dormancy.</p>
+      <p>This cold exposure triggers the tree to break dormancy and bloom properly in spring. Without enough chill hours, trees may:</p>
+      <p>• Bloom late or unevenly<br>• Produce less fruit<br>• Have weak, delayed leaf growth</p>
+      <p><strong>Montana &amp; Utah typically get 800-1200+ chill hours</strong>, which is plenty for most varieties. This is actually an advantage — you can grow high-chill varieties that won't work in warmer climates.</p>
+      <p><strong>Low-chill varieties</strong> (under 500 hours) may bloom too early and get hit by late frosts.</p>
+    `
+  },
+  'zones': {
+    title: '🗺️ USDA Hardiness Zones',
+    content: `
+      <p><strong>USDA Plant Hardiness Zones</strong> indicate the average annual minimum winter temperature in an area.</p>
+      <p><strong>Montana ranges from Zone 3 to Zone 6:</strong></p>
+      <p>• Zone 3: -40°F to -30°F (mountains, northern MT)<br>• Zone 4: -30°F to -20°F (most of MT)<br>• Zone 5: -20°F to -10°F (valleys, southern MT)<br>• Zone 6: -10°F to 0°F (protected microclimates)</p>
+      <p><strong>Utah ranges from Zone 4 to Zone 8:</strong></p>
+      <p>• Zone 4-5: Northern Utah, mountains<br>• Zone 6-7: Salt Lake, valleys<br>• Zone 8: St. George area</p>
+      <p>Choose varieties rated for <strong>your zone or colder</strong>. A Zone 4 tree will survive in Zone 5, but a Zone 6 tree may die in Zone 4.</p>
+    `
+  },
+  'pollination': {
+    title: '🐝 Pollination Basics',
+    content: `
+      <p><strong>Pollination</strong> is the transfer of pollen between flowers, which is required for fruit production.</p>
+      <p><strong>Self-fertile trees</strong> can pollinate themselves — one tree is enough.</p>
+      <p><strong>Cross-pollination</strong> means you need two different varieties that bloom at the same time. They must be:</p>
+      <p>• Within <strong>50 feet</strong> of each other (closer is better)<br>• The <strong>same type</strong> (apple pollinates apple, not pear)<br>• <strong>Different varieties</strong> (two Honeycrisps won't work)<br>• <strong>Bloom at the same time</strong></p>
+      <p><strong>Tip:</strong> Even self-fertile trees often produce better with a pollination partner nearby. Bees do the work — plant flowers nearby to attract them!</p>
+    `
+  },
+  'self-fertile': {
+    title: '✓ Self-Fertile vs Cross-Pollination',
+    content: `
+      <p><strong>Self-fertile</strong> (also called self-pollinating or self-fruitful):</p>
+      <p>• Tree can pollinate its own flowers<br>• Only need ONE tree for fruit<br>• Examples: most sour cherries, European plums, peaches</p>
+      <p><strong>Requires cross-pollination:</strong></p>
+      <p>• Need TWO different varieties<br>• Must be compatible (bloom at same time)<br>• Plant within 50 feet of each other<br>• Examples: most apples, pears, sweet cherries</p>
+      <p><strong>Important:</strong> Some varieties are "pollen sterile" — they can't pollinate other trees even if they're cross-pollinated. Always check compatibility!</p>
+    `
+  },
+  'rootstock': {
+    title: '🌿 Rootstock Types',
+    content: `
+      <p>Fruit trees are <strong>grafted</strong> — the fruiting variety is joined to a separate root system (rootstock) that controls the tree's size.</p>
+      <p><strong>Standard:</strong> Full-size tree, 25-30 feet tall. Lives longest, most cold-hardy, but takes 6-8 years to bear fruit.</p>
+      <p><strong>Semi-Dwarf:</strong> 12-18 feet tall. Good balance of size and productivity. Bears in 4-5 years. Most popular choice.</p>
+      <p><strong>Dwarf:</strong> 8-12 feet tall. Bears fruit in 2-3 years. Great for small spaces. May need staking. Less cold-hardy.</p>
+      <p><strong>For Montana/Utah:</strong> Semi-dwarf is often the best choice — dwarf rootstocks can be less winter-hardy. Standard trees are most reliable in extreme cold.</p>
+    `
+  },
+  'spacing': {
+    title: '📏 Tree Spacing',
+    content: `
+      <p>Proper spacing ensures trees get enough <strong>sunlight, air circulation, and root space</strong>.</p>
+      <p><strong>Dwarf trees:</strong> 8-10 feet apart</p>
+      <p><strong>Semi-dwarf trees:</strong> 12-15 feet apart</p>
+      <p><strong>Standard trees:</strong> 20-30 feet apart</p>
+      <p><strong>For pollination partners:</strong> Plant within 50 feet of each other. Closer is better — 15-25 feet ideal.</p>
+      <p><strong>Row spacing:</strong> Allow same distance between rows as between trees in a row, or slightly more for equipment access.</p>
+      <p><strong>Tip:</strong> It's tempting to plant closer, but overcrowded trees have more disease, less fruit, and are harder to maintain.</p>
+    `
+  },
+  'harvest': {
+    title: '📅 Harvest Timing',
+    content: `
+      <p>Harvest dates are <strong>approximate</strong> and vary by:</p>
+      <p>• Your specific location and elevation<br>• Weather that year (warm spring = earlier)<br>• Tree's sun exposure</p>
+      <p><strong>Early season:</strong> July - Early August<br><strong>Mid season:</strong> August - Early September<br><strong>Late season:</strong> September - October</p>
+      <p><strong>How to know when to pick:</strong></p>
+      <p>• Apples: Taste test! Seeds should be brown.<br>• Pears: Pick when firm, ripen off tree.<br>• Stone fruit: Color change, slight softening, easy release from branch.</p>
+      <p><strong>Tip:</strong> Plant a mix of early, mid, and late varieties to spread out your harvest over several months.</p>
+    `
+  },
+  'freestone': {
+    title: '🍑 Freestone vs Clingstone',
+    content: `
+      <p>These terms describe how the flesh attaches to the pit in <strong>peaches, nectarines, and plums</strong>.</p>
+      <p><strong>Freestone:</strong></p>
+      <p>• Flesh separates easily from pit<br>• Easier to eat fresh and slice<br>• Better for canning and freezing<br>• Most home orchard varieties are freestone</p>
+      <p><strong>Clingstone:</strong></p>
+      <p>• Flesh clings tightly to pit<br>• Often sweeter and juicier<br>• Mainly used for commercial canning<br>• Harder to work with at home</p>
+      <p><strong>Semi-freestone:</strong> In between — some cling near the pit, releases more easily when fully ripe.</p>
+    `
+  },
+  'winter': {
+    title: '❄️ Winter Protection',
+    content: `
+      <p>Montana and Utah winters can be brutal. Protect your trees:</p>
+      <p><strong>Trunk wrapping:</strong> Wrap trunks with tree wrap or white guards in fall. Prevents sunscald (bark damage from freeze-thaw cycles on sunny winter days).</p>
+      <p><strong>Mulching:</strong> Apply 4-6 inches of mulch around the base, but keep it 6 inches away from the trunk to prevent rot.</p>
+      <p><strong>Rodent protection:</strong> Hardware cloth cylinders around trunks prevent rabbit and vole damage.</p>
+      <p><strong>Wind protection:</strong> Young trees benefit from windbreaks. Burlap screens can help the first few winters.</p>
+      <p><strong>Late frost:</strong> Cover blooming trees with sheets/blankets if late frost threatens. Remove during day.</p>
+    `
+  },
+  'planting': {
+    title: '🌱 Planting Guide',
+    content: `
+      <p><strong>When to plant:</strong> Early spring (after ground thaws) or fall (6 weeks before hard freeze). Spring is safest in cold climates.</p>
+      <p><strong>Site selection:</strong></p>
+      <p>• Full sun (6+ hours daily)<br>• Good air drainage (avoid frost pockets)<br>• Well-drained soil<br>• South or east facing slopes are ideal</p>
+      <p><strong>Planting steps:</strong></p>
+      <p>1. Dig hole 2x wider than root ball, same depth<br>2. Don't amend soil — roots need to adapt<br>3. Place graft union 2" above soil line<br>4. Water deeply, add mulch<br>5. Stake only if needed</p>
+      <p><strong>First year:</strong> Water deeply once a week. Remove any fruit that forms — let the tree establish roots first.</p>
+    `
+  },
+  'pruning': {
+    title: '✂️ Pruning',
+    content: `
+      <p><strong>When to prune:</strong> Late winter while dormant, before buds swell. Avoid fall pruning in cold climates.</p>
+      <p><strong>Goals:</strong></p>
+      <p>• Open center for light and air<br>• Remove dead, diseased, crossing branches<br>• Maintain manageable size<br>• Encourage fruit production</p>
+      <p><strong>Basic rules:</strong></p>
+      <p>• Never remove more than 1/3 of the tree<br>• Make clean cuts just outside the branch collar<br>• Remove water sprouts (vertical shoots)<br>• Head back long branches to outward-facing buds</p>
+      <p><strong>By type:</strong></p>
+      <p>• Apples/Pears: Central leader or modified central leader<br>• Stone fruit: Open vase/center shape<br>• Peaches: Prune harder — they fruit on new wood</p>
+    `
+  },
+  'pests': {
+    title: '🦌 Pest & Wildlife',
+    content: `
+      <p><strong>Deer:</strong> Biggest threat. Use 8-foot fencing, tree cages, or deer repellent sprays. Most damage is winter browsing.</p>
+      <p><strong>Rabbits/Voles:</strong> Chew bark at ground level in winter. Use hardware cloth cylinders around trunks.</p>
+      <p><strong>Codling moth:</strong> The "worm in the apple." Use pheromone traps, kaolin clay spray, or bags on individual fruits.</p>
+      <p><strong>Aphids:</strong> Cause curled leaves. Usually not serious — ladybugs help. Spray with water or insecticidal soap if severe.</p>
+      <p><strong>Fire blight:</strong> Bacterial disease in apples/pears. Prune out blackened branches 12" below infection. Sterilize tools between cuts.</p>
+      <p><strong>Prevention:</strong> Clean up fallen fruit, prune for airflow, choose disease-resistant varieties.</p>
+    `
+  }
+};
+
+// Show info modal
+function showInfo(key) {
+  const info = infoContent[key];
+  if (!info) return;
+  
+  document.getElementById('infoContent').innerHTML = `
+    <div class="info-modal-header">
+      <span class="info-modal-title">${info.title}</span>
+      <button class="info-modal-close" onclick="closeInfo()">×</button>
+    </div>
+    <div class="info-modal-body">${info.content}</div>
+  `;
+  document.getElementById('infoModal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeInfo() {
+  document.getElementById('infoModal').style.display = 'none';
+  if (document.getElementById('modal').style.display !== 'flex') {
+    document.body.style.overflow = '';
+  }
+}
+
+// Tree database
+const trees = [
+  // APPLES
+  {
+    id: 'honeycrisp', name: 'Honeycrisp', type: 'apple', icon: '🍎',
+    variety: 'Malus domestica', zone: '3-7', chillHours: '800-1000',
+    harvestTime: 'Mid-September',
+    spacing: { standard: '25-30 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Fuji', 'Gala', 'Golden Delicious', 'Granny Smith', 'McIntosh'],
+    recommendedPollinators: ['Fuji', 'Gala'],
+    description: 'Extremely popular apple with explosive crunch and balanced sweet-tart flavor. Excellent cold hardiness makes it ideal for Montana and northern Utah.',
+    planting: 'Plant in early spring after last frost. Needs well-drained soil with pH 6.0-7.0. Full sun required.',
+    protection: 'Wrap trunk in fall to prevent sunscald and rodent damage. Apply 4" mulch ring.',
+  },
+  {
+    id: 'zestar', name: 'Zestar!', type: 'apple', icon: '🍎',
+    variety: 'Malus domestica', zone: '3-7', chillHours: '800-1000',
+    harvestTime: 'Late August',
+    spacing: { standard: '25-30 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Honeycrisp', 'State Fair', 'Sweet Sixteen'],
+    recommendedPollinators: ['Honeycrisp'],
+    description: 'Early-season apple from University of Minnesota. Crisp, juicy, zesty flavor. One of the earliest to ripen.',
+    planting: 'Ideal for zones 3-4. Plant as early as ground can be worked.',
+    protection: 'Very cold hardy. Standard winter protection sufficient.',
+  },
+  {
+    id: 'haralson', name: 'Haralson', type: 'apple', icon: '🍎',
+    variety: 'Malus domestica', zone: '3-6', chillHours: '800-1000',
+    harvestTime: 'Early October',
+    spacing: { standard: '25-30 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Honeycrisp', 'Wealthy', 'State Fair'],
+    recommendedPollinators: ['Honeycrisp', 'Wealthy'],
+    description: 'Extremely cold-hardy apple from Minnesota. Tart, firm flesh excellent for pies. Stores exceptionally well.',
+    planting: 'One of the hardiest apples available.',
+    protection: 'Minimal protection needed.',
+  },
+  {
+    id: 'golden-delicious', name: 'Golden Delicious', type: 'apple', icon: '🍎',
+    variety: 'Malus domestica', zone: '4-9', chillHours: '600-700',
+    harvestTime: 'Late September',
+    spacing: { standard: '25-30 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Any apple variety'],
+    recommendedPollinators: [],
+    description: 'Classic yellow apple. Self-fertile but produces better with cross-pollination. Excellent pollinator for other varieties.',
+    planting: 'Adaptable to various soils. Good choice as a pollinator tree.',
+    protection: 'Standard winter protection.',
+  },
+  // PEARS
+  {
+    id: 'bartlett', name: 'Bartlett', type: 'pear', icon: '🍐',
+    variety: 'Pyrus communis', zone: '5-8', chillHours: '800-900',
+    harvestTime: 'Late August',
+    spacing: { standard: '20-25 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Anjou', 'Bosc', 'Moonglow'],
+    recommendedPollinators: ['Anjou', 'Moonglow'],
+    description: 'The classic American pear. Sweet, aromatic, and juicy when ripe.',
+    planting: 'Plant in well-drained soil. Space pollination partners within 50 feet.',
+    protection: 'Protect from late spring frosts which can damage blossoms.',
+  },
+  {
+    id: 'ure', name: 'Ure', type: 'pear', icon: '🍐',
+    variety: 'Pyrus ussuriensis hybrid', zone: '3-7', chillHours: '600-800',
+    harvestTime: 'Late August',
+    spacing: { standard: '20-25 ft', semiDwarf: '12-15 ft', dwarf: '10-12 ft' },
+    selfFertile: false,
+    pollinators: ['Early Gold', 'Golden Spice', 'Luscious'],
+    recommendedPollinators: ['Luscious'],
+    description: 'Hardy Manchurian pear hybrid from South Dakota. One of the hardiest pears for northern climates. Tolerates -40°F.',
+    planting: 'Excellent choice for Montana and northern Utah.',
+    protection: 'Extremely cold hardy. Minimal protection needed.',
+  },
+  {
+    id: 'luscious', name: 'Luscious', type: 'pear', icon: '🍐',
+    variety: 'Pyrus hybrid', zone: '4-8', chillHours: '700-800',
+    harvestTime: 'Mid-September',
+    spacing: { standard: '20-25 ft', semiDwarf: '12-15 ft', dwarf: '10-12 ft' },
+    selfFertile: false,
+    pollinators: ['Ure', 'Parker', 'Summercrisp'],
+    recommendedPollinators: ['Ure', 'Parker'],
+    description: 'Hardy hybrid with excellent flavor for cold climates. Medium-sized yellow fruit with red blush.',
+    planting: 'Great choice for zone 4.',
+    protection: 'Good cold hardiness.',
+  },
+  // CHERRIES
+  {
+    id: 'montmorency', name: 'Montmorency', type: 'cherry', icon: '🍒',
+    variety: 'Prunus cerasus', zone: '4-7', chillHours: '700-800',
+    harvestTime: 'Late June',
+    spacing: { standard: '20-25 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'The classic pie cherry. Tart, bright red fruit perfect for baking. Self-fertile and very productive.',
+    planting: 'Sour cherries are more cold-hardy than sweet cherries. Good choice for Montana.',
+    protection: 'More cold-tolerant than sweet cherries.',
+  },
+  {
+    id: 'north-star', name: 'North Star', type: 'cherry', icon: '🍒',
+    variety: 'Prunus cerasus', zone: '4-8', chillHours: '800-1000',
+    harvestTime: 'Late June',
+    spacing: { standard: '12-15 ft', semiDwarf: '8-10 ft', dwarf: '6-8 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'Natural dwarf sour cherry, only 8-10 feet tall. Self-fertile with heavy crops. Perfect for small spaces.',
+    planting: 'Very cold hardy. Excellent for zone 4.',
+    protection: 'One of the best cherries for extreme cold.',
+  },
+  {
+    id: 'stella', name: 'Stella', type: 'cherry', icon: '🍒',
+    variety: 'Prunus avium', zone: '5-8', chillHours: '700-800',
+    harvestTime: 'Late June',
+    spacing: { standard: '25-30 ft', semiDwarf: '15-18 ft', dwarf: '10-12 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile', 'Universal pollinator'],
+    recommendedPollinators: [],
+    description: 'Self-fertile sweet cherry — rare and valuable. Dark red, heart-shaped fruit. Can pollinate other sweet cherries.',
+    planting: 'Great choice if you only have room for one sweet cherry.',
+    protection: 'Standard protection for sweet cherries.',
+  },
+  // PLUMS
+  {
+    id: 'mount-royal', name: 'Mount Royal', type: 'plum', icon: '🟣',
+    variety: 'Prunus domestica', zone: '4-7', chillHours: '800-900',
+    harvestTime: 'Late August',
+    spacing: { standard: '18-22 ft', semiDwarf: '10-14 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'Very cold-hardy European plum from Quebec. Self-fertile with blue fruit. One of the best plums for zone 4.',
+    planting: 'Excellent choice for Montana and northern Utah.',
+    protection: 'Exceptional cold hardiness.',
+  },
+  {
+    id: 'toka', name: 'Toka', type: 'plum', icon: '🟣',
+    variety: 'Prunus hybrid', zone: '3-8', chillHours: '700-800',
+    harvestTime: 'Mid-August',
+    spacing: { standard: '18-22 ft', semiDwarf: '10-14 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Superior', 'Waneta', 'Underwood'],
+    recommendedPollinators: ['Superior'],
+    description: 'Extremely cold-hardy, called "Bubblegum Plum" for its sweet flavor. Excellent pollinator for other hybrid plums.',
+    planting: 'One of the hardiest plums. Reliable in zone 3.',
+    protection: 'Minimal protection needed.',
+  },
+  {
+    id: 'superior', name: 'Superior', type: 'plum', icon: '🟣',
+    variety: 'Prunus hybrid', zone: '4-8', chillHours: '700-800',
+    harvestTime: 'Late August',
+    spacing: { standard: '18-22 ft', semiDwarf: '10-14 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Toka', 'Waneta'],
+    recommendedPollinators: ['Toka'],
+    description: 'Hardy Japanese-American hybrid. Large red fruit with yellow flesh, sweet flavor.',
+    planting: 'Plant with Toka for best pollination.',
+    protection: 'Good cold hardiness.',
+  },
+  // PEACHES
+  {
+    id: 'reliance', name: 'Reliance', type: 'peach', icon: '🍑',
+    variety: 'Prunus persica', zone: '4-8', chillHours: '1000-1050',
+    harvestTime: 'Late August',
+    spacing: { standard: '18-22 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'The hardiest peach, surviving -25°F. Medium freestone fruit. Best bet for Montana peach growing.',
+    planting: 'Plant in warmest microclimate. South-facing slope ideal.',
+    protection: 'Even this hardy peach benefits from protection in zone 4.',
+  },
+  {
+    id: 'contender', name: 'Contender', type: 'peach', icon: '🍑',
+    variety: 'Prunus persica', zone: '4-8', chillHours: '1050-1100',
+    harvestTime: 'Mid-August',
+    spacing: { standard: '18-22 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'Very cold-hardy freestone. Large fruit with excellent flavor. Blooms late, avoiding spring frost.',
+    planting: 'Late bloom is advantage in frost-prone areas.',
+    protection: 'Hardy but benefits from protection in zone 4.',
+  },
+  // APRICOTS
+  {
+    id: 'moongold', name: 'Moongold', type: 'apricot', icon: '🟠',
+    variety: 'Prunus armeniaca', zone: '4-7', chillHours: '700-800',
+    harvestTime: 'Late July',
+    spacing: { standard: '18-22 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Sungold'],
+    recommendedPollinators: ['Sungold'],
+    description: 'Hardy apricot from University of Minnesota. Must be planted with Sungold. Golden fruit with sprightly flavor.',
+    planting: 'Always plant with Sungold — they were developed as a pair.',
+    protection: 'Hardy tree, but early bloom still susceptible to frost.',
+  },
+  {
+    id: 'sungold', name: 'Sungold', type: 'apricot', icon: '🟠',
+    variety: 'Prunus armeniaca', zone: '4-7', chillHours: '700-800',
+    harvestTime: 'Late July',
+    spacing: { standard: '18-22 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: false,
+    pollinators: ['Moongold'],
+    recommendedPollinators: ['Moongold'],
+    description: 'Hardy apricot, pollination partner for Moongold. Plant both for reliable crops.',
+    planting: 'Must have Moongold nearby.',
+    protection: 'Site selection important for early bloom.',
+  },
+  {
+    id: 'manchurian', name: 'Manchurian', type: 'apricot', icon: '🟠',
+    variety: 'Prunus mandshurica', zone: '3-7', chillHours: '700-800',
+    harvestTime: 'Late July',
+    spacing: { standard: '20-25 ft', semiDwarf: '12-15 ft', dwarf: '8-10 ft' },
+    selfFertile: true,
+    pollinators: ['Self-fertile'],
+    recommendedPollinators: [],
+    description: 'Extremely cold-hardy species apricot. Smaller fruit but survives -40°F. Best bet for zone 3-4.',
+    planting: 'Most reliable apricot for extreme cold.',
+    protection: 'Very hardy, though late frosts still affect bloom.',
+  },
+];
+
+// Render tree card
+function renderTreeCard(tree) {
+  const pollinationHtml = tree.selfFertile
+    ? '<span class="self-fertile">✓ Self-fertile</span>'
+    : tree.pollinators.slice(0, 2).map(p => `<span class="partner-tag">${p}</span>`).join('') +
+      (tree.pollinators.length > 2 ? `<span class="partner-tag">+${tree.pollinators.length - 2}</span>` : '');
+
+  return `
+    <div class="tree-card" onclick="openTree('${tree.id}')">
+      <div class="tree-header">
+        <span class="tree-icon">${tree.icon}</span>
+        <div class="tree-info">
+          <div class="tree-name">${tree.name}</div>
+          <div class="tree-variety">${tree.variety}</div>
+        </div>
+        <span class="tree-type-badge ${tree.type}">${tree.type}</span>
+      </div>
+      <div class="tree-meta">
+        <div class="meta-item">
+          <span class="meta-icon">🌡️</span>
+          <span class="meta-value">Zone ${tree.zone}</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">📅</span>
+          <span class="meta-value">${tree.harvestTime}</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">❄️</span>
+          <span class="meta-value">${tree.chillHours} hrs</span>
+          <button class="info-btn" onclick="event.stopPropagation();showInfo('chill-hours')">?</button>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">📏</span>
+          <span class="meta-value">${tree.spacing.semiDwarf}</span>
+        </div>
+      </div>
+      <div class="pollination-info">
+        <div class="pollination-label">
+          Pollination
+          <button class="info-btn" onclick="event.stopPropagation();showInfo('pollination')" style="margin-left:4px">?</button>
+        </div>
+        <div class="pollination-partners">${pollinationHtml}</div>
+      </div>
+    </div>
+  `;
+}
+
+// Render tree detail modal
+function renderTreeDetail(tree) {
+  const partnersHtml = tree.selfFertile
+    ? '<span class="self-fertile" style="font-size:1rem">✓ Self-fertile — no pollination partner needed</span>'
+    : tree.pollinators.map(p =>
+        `<span class="partner-item ${tree.recommendedPollinators.includes(p) ? 'recommended' : ''}">${p}</span>`
+      ).join('');
+
+  return `
+    <div class="modal-header">
+      <span class="modal-icon">${tree.icon}</span>
+      <div>
+        <div class="modal-title">${tree.name}</div>
+        <div class="modal-variety">${tree.variety}</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕ Close</button>
+    </div>
+    <div class="modal-body">
+      <div class="detail-section">
+        <div class="detail-label">
+          Growing Info
+          <button class="info-btn" onclick="showInfo('zones')" style="margin-left:6px">?</button>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <div class="detail-value">${tree.zone}</div>
+            <div class="detail-key">Zones</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-value">${tree.chillHours}</div>
+            <div class="detail-key">Chill Hrs</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-value">${tree.harvestTime.split(' ')[0]}</div>
+            <div class="detail-key">Harvest</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-label">
+          Spacing
+          <button class="info-btn" onclick="showInfo('rootstock')" style="margin-left:6px">?</button>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <div class="detail-value">${tree.spacing.dwarf}</div>
+            <div class="detail-key">Dwarf</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-value">${tree.spacing.semiDwarf}</div>
+            <div class="detail-key">Semi-Dwarf</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-value">${tree.spacing.standard}</div>
+            <div class="detail-key">Standard</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-label">
+          Pollination
+          <button class="info-btn" onclick="showInfo('pollination')" style="margin-left:6px">?</button>
+        </div>
+        <div class="partner-list">${partnersHtml}</div>
+        ${!tree.selfFertile ? '<p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">★ = Recommended. Plant within 50 feet.</p>' : ''}
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-label">Description</div>
+        <p class="detail-text">${tree.description}</p>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-label">Planting Tips</div>
+        <p class="detail-text">${tree.planting}</p>
+      </div>
+
+      <div class="detail-section">
+        <div class="detail-label">Winter Protection</div>
+        <p class="detail-text">${tree.protection}</p>
+      </div>
+    </div>
+  `;
+}
+
+// Render all trees
+function renderTrees(filter = 'all', search = '') {
+  const filtered = trees.filter(t => {
+    if (filter !== 'all' && t.type !== filter) return false;
+    if (search) {
+      const s = search.toLowerCase();
+      return t.name.toLowerCase().includes(s) ||
+             t.type.toLowerCase().includes(s) ||
+             t.variety.toLowerCase().includes(s) ||
+             t.pollinators.some(p => p.toLowerCase().includes(s));
+    }
+    return true;
+  });
+
+  document.getElementById('treeGrid').innerHTML = filtered.map(renderTreeCard).join('');
+  document.getElementById('treeCount').textContent = `${filtered.length} varieties`;
+}
+
+// Modal functions
+function openTree(id) {
+  const tree = trees.find(t => t.id === id);
+  if (!tree) return;
+  document.getElementById('modalContent').innerHTML = renderTreeDetail(tree);
+  document.getElementById('modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Page navigation
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const page = item.dataset.page;
+    
+    // Update nav
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    item.classList.add('active');
+    
+    // Update pages
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(`page-${page}`).classList.add('active');
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+  });
+});
+
+// Filter chips
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    renderTrees(chip.dataset.filter, document.getElementById('searchInput').value);
+  });
+});
+
+// Search
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  const activeFilter = document.querySelector('.chip.active').dataset.filter;
+  renderTrees(activeFilter, e.target.value);
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeInfo();
+  }
+});
+
+// Initial render
+renderTrees();
+  </script>
+</body>
+</html>
